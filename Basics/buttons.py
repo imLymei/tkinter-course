@@ -8,15 +8,19 @@ from tkinter import ttk
 #! Window
 window = tk.Tk()
 window.title('Buttons')
-window.geometry('600x400')
+window.geometry('150x100')
 
 
 #? Widgets
-#? Button
-button = ttk.Button(window,text = 'A simple button', command = lambda:print('A simple button was pressed'))
+#?  Button
+button = ttk.Button(
+    window,
+    text = 'A simple button',
+    command = lambda:print('A simple button was pressed')
+    )
 button.pack()
 
-#? Checkbutton
+#?  Checkbutton
 check_variable = tk.BooleanVar()
 check = ttk.Checkbutton(
     window,
@@ -26,7 +30,7 @@ check = ttk.Checkbutton(
     )
 check.pack()
 
-#? Radiobuttons
+#?  Radiobuttons
 radio_variable = tk.StringVar()
 radio1 = ttk.Radiobutton(
     window,
@@ -36,6 +40,7 @@ radio1 = ttk.Radiobutton(
     command = lambda:print(radio_variable.get())
     )
 radio1.pack()
+
 radio2 = ttk.Radiobutton(
     window,
     text = 'Radiobutton 2',
