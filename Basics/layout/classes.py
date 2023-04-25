@@ -73,8 +73,8 @@ class Main(ttk.Frame):
         )
         frame2 = MainFrame(
             self,
-            {'text': 'Label 1', 'background': 'blue'},
-            {'text': 'Button 1'}
+            {'text': 'Label 2', 'background': 'blue'},
+            {'text': 'Button 2'}
         )
 
 
