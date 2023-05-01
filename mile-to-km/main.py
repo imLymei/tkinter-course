@@ -3,10 +3,10 @@ import tkinter as tk
 import ttkbootstrap as ttk
 
 
-#* A miles to kilometers converter
+# * A miles to kilometers converter
 
 
-def decimal_set(number,decimal_get):
+def decimal_set(number, decimal_get):
     if number == 0:
         return 0
     decimal = 10**decimal_get
@@ -20,35 +20,37 @@ def convert():
 
 
 #! Window
-window = ttk.Window(themename = 'darkly')
-window.resizable(False,False)
+window = ttk.Window(themename='darkly')
+window.resizable(False, False)
 window.title('Mile to Km converter')
 window.geometry('300x150')
 
 
-#? Widgets
-#?  Title
-title_label = ttk.Label(master = window, text = 'Miles to Kilometers', font = 'Arial 24')
+# ? Widgets
+# ?  Title
+title_label = ttk.Label(
+    master=window, text='Miles to Kilometers', font='Arial 24')
 title_label.pack()
 
-#?  Input frame
-input_frame = ttk.Frame(master = window)
+# ?  Input frame
+input_frame = ttk.Frame(master=window)
 input_frame.pack()
 
-#?  Text input
+# ?  Text input
 input_int = tk.IntVar()
-input_text = ttk.Entry(master = input_frame, textvariable = input_int)
-input_text.pack(side = 'left', padx = 10)
+input_text = ttk.Entry(master=input_frame, textvariable=input_int)
+input_text.pack(side='left', padx=10)
 
-#?  Button
-button = ttk.Button(master = input_frame, text = 'Convert', command = convert)
-button.pack(side = 'left', pady = 10)
+# ?  Button
+button = ttk.Button(master=input_frame, text='Convert', command=convert)
+button.pack(side='left', pady=10)
 
-#?  Output
+# ?  Output
 output_string = tk.StringVar()
-output_label = ttk.Label(master = window, text = 'output', font = 'Arial 16', textvariable = output_string)
+output_label = ttk.Label(master=window, text='output',
+                         font='Arial 16', textvariable=output_string)
 output_string.set('0 Km')
-output_label.pack(pady = 5)
+output_label.pack(pady=5)
 
 
 #! Main loop
