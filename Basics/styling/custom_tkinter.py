@@ -36,7 +36,9 @@ slider = ctk.CTkSlider(frame)
 slider.pack()
 
 switch = ctk.CTkSwitch(frame, text='Exercise Switch',
-                       fg_color='red', progress_color='pink', button_color='green', button_hover_color='yellow', switch_width=60, corner_radius=5)
+                       fg_color='red', progress_color='pink',
+                       button_color='green', button_hover_color='yellow',
+                       switch_width=60, corner_radius=5)
 switch.pack()
 
 window.mainloop()
